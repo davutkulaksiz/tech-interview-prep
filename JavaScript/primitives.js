@@ -17,3 +17,4 @@ console.log(null === undefined)
 
 // ANYTHING IS NOT A PRIMITIVE
 // IS AN OBJECT
+// Functions, arrays, or any class instances

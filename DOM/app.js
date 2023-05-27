@@ -56,3 +56,12 @@ console.log(li.classList.contains("gatto")); // false
 
 // REMOVE ELEMENTS
 li.remove();
+
+
+
+
+
+
+// TRAVERSE the DOM
+
+// PARENT NODE TRAVERSAL

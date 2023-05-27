@@ -33,4 +33,26 @@ for (let i = 0; i < list.length; i++) {
   list[i].style.fontWeight = "700";
 }
 
+// CREATING ELEMENTS
+const ul = document.querySelector("ul");
+const li = document.createElement("li");
 
+// ADDING ELEMENTS
+ul.append(li);
+
+// MODIFYING THE TEXT
+li.innerText = "DUNE";
+
+// MODIFYING ATTRIBUTES & CLASSES
+li.setAttribute("class", "list-items");
+li.setAttribute("id", "main-heading");
+li.removeAttribute("id");
+
+console.log(title.getAttribute("id"));
+li.classList.add("list-items", "gatto", "gatito");
+li.classList.remove("gatto", "gatito");
+
+console.log(li.classList.contains("gatto")); // false
+
+// REMOVE ELEMENTS
+li.remove();

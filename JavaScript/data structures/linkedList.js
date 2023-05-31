@@ -5,17 +5,15 @@ class Node {
   }
 }
 
-// Create linked list
-let head = new Node("apple");
-let second = new Node("banana");
-let third = new Node("orange");
+let head = new Node("tekir");
+let second = new Node("dombili");
+let third = new Node("gatto");
 
 head.next = second;
 second.next = third;
 
-// traverse the linked list
 let currentNode = head;
-while (currentNode != null) {
+while (currentNode !== null) {
   console.log(currentNode.data);
   currentNode = currentNode.next;
 }

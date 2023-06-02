@@ -1,8 +1,8 @@
-import reactLogo from './assets/react.svg'
-import './App.css'
+import reactLogo from "./assets/react.svg";
+import "./App.css";
+import Playground from "../pages/Playground";
 
 function App() {
-
   return (
     <>
       <div>
@@ -10,9 +10,10 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Playground</h1>
+      <h1>Playground Project</h1>
+      <Playground />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

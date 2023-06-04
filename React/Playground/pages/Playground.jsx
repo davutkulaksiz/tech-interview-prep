@@ -1,4 +1,7 @@
-import HooksLab, { HookRef, HookContext } from "../components/HooksLab/HooksLab";
+import HooksLab, {
+  HookContext,
+  HookRef,
+} from "../components/HooksLab/HooksLab";
 import { useState } from "react";
 
 const Playground = () => {

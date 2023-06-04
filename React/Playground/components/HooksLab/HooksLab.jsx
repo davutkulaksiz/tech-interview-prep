@@ -38,7 +38,6 @@ export const HookContext = () => {
     tekir: "dombili",
     sarman: "turunç",
   };
-
   return (
     <CatContext.Provider value={strays}>
       <Cats />

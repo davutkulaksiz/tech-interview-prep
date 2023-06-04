@@ -1,4 +1,5 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, createContext } from "react";
+import Cats from "../Cats/Cats";
 
 const HooksLab = () => {
   return (
@@ -27,5 +28,20 @@ export const HookRef = () => {
         Increment
       </button>
     </>
+  );
+};
+
+export const CatContext = createContext();
+
+export const HookContext = () => {
+  const strays = {
+    tekir: "dombili",
+    sarman: "turunç",
+  };
+
+  return (
+    <CatContext.Provider value={strays}>
+      <Cats />
+    </CatContext.Provider>
   );
 };

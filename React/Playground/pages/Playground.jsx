@@ -1,18 +1,31 @@
-import HooksLab, { HookRef } from "../components/HooksLab/HooksLab";
+import HooksLab, { HookRef, HookContext } from "../components/HooksLab/HooksLab";
 import { useState } from "react";
 
 const Playground = () => {
   const [isUseRefActive, setIsUseRefActive] = useState(false);
+  const [isUseContextActive, setIsUseContextActive] = useState(false);
 
   return (
     <>
       <HooksLab />
-      <button
-        onClick={() => setIsUseRefActive((isUseRefActive) => !isUseRefActive)}
-      >
-        useRef
-      </button>
-      {isUseRefActive ? <HookRef /> : null}
+      <div>
+        <button
+          onClick={() => setIsUseRefActive((isUseRefActive) => !isUseRefActive)}
+        >
+          useRef
+        </button>
+        {isUseRefActive ? <HookRef /> : null}
+      </div>
+      <div>
+        <button
+          onClick={() =>
+            setIsUseContextActive((isUseContextActive) => !isUseContextActive)
+          }
+        >
+          useContext
+        </button>
+        {isUseContextActive ? <HookContext /> : null}
+      </div>
     </>
   );
 };

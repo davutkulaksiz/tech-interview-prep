@@ -1,4 +1,4 @@
-// Write a function in JavaScript that takes an array of integers as input 
+// Write a function in JavaScript that takes an array of integers as input
 // and returns the sum of all prime numbers in the array.
 
 const sumPrimes = (arr) => {
@@ -11,8 +11,8 @@ const sumPrimes = (arr) => {
     }
     sum += number;
   });
+
   return sum;
 };
 
-console.log(sumPrimes([2, 3, 5, 6]));
-
+console.log(sumPrimes([2, 3, 5, 6, 7, 10]));

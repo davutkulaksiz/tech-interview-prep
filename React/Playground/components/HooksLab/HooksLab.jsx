@@ -5,7 +5,7 @@ const HooksLab = () => {
   const ref = useRef();
 
   useEffect(() => {
-    console.log((ref.current.innerText = "Increment the Counter"));
+    console.log((ref.current.innerText = "Increment the Counter (Changed by useRef)"));
   }, []);
 
   return (

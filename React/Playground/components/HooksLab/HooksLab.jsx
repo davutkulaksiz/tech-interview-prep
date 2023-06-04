@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect, createContext } from "react";
+import { useState, useRef, useEffect, createContext, useReducer } from "react";
 import Cats from "../Cats/Cats";
 
 const HooksLab = () => {
@@ -42,5 +42,30 @@ export const HookContext = () => {
     <CatContext.Provider value={strays}>
       <Cats />
     </CatContext.Provider>
+  );
+};
+
+const reducer = (state, action) => {
+  switch (action.type) {
+    case "increment":
+      return state + 1;
+    case "decrement":
+      return state - 1;
+    default:
+      throw new Error();
+  }
+};
+
+export const HookReducer = () => {
+  const [state, dispatch] = useReducer(reducer, 0);
+
+  return (
+    <div style={{ marginTop: "0.5rem" }}>
+      Count: {state}
+      <div>
+        <button onClick={() => dispatch({ type: "increment" })}>+</button>
+        <button onClick={() => dispatch({ type: "decrement" })}>-</button>
+      </div>
+    </div>
   );
 };

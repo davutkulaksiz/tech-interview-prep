@@ -25,16 +25,18 @@ const App = () => {
   const [state, dispatch] = useReducer(reducer, 0); // reducer function, initial state
 
   return (
-    <>
+    <div>
       Count: {state}
       {/**
        * ACTION
        * type: string
        * payload: any
        */}
-      <button onClick={() => dispatch({ type: "decrement" })}>-</button>
-      <button onClick={() => dispatch({ type: "increment" })}>+</button>
-    </>
+      <div>
+        <button onClick={() => dispatch({ type: "decrement" })}>-</button>
+        <button onClick={() => dispatch({ type: "increment" })}>+</button>
+      </div>
+    </div>
   );
 };
 

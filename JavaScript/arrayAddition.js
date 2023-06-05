@@ -14,3 +14,8 @@ let arrES6 = ["a", "b", "c", "d"];
 arrES6 = ["start", ...arrES6, "end"];
 
 console.log(arrES6);
+
+// add to a specific index
+let cats = ["beebo", "cookie", "tekir", "turunç"];
+cats.splice(1, 0, "davido");
+console.log(cats); // [ 'beebo', 'davido', 'cookie', 'tekir', 'turunç' ]

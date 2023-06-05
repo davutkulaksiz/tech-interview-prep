@@ -82,3 +82,25 @@ const angryKarma = {
 
 angryKarma.whodis();
 angryKarma.butWhoAmI();
+
+// One of the big motivations of React to use functional components over class-based
+// components was so that developers wouldn't have to use 'this' in their code
+// because it gets even more complicated when you have a big framework with
+// a bunch of dependencies and components
+
+// Functional
+const Fun = (props) => {
+  <div>
+    <h1>Hello, {props.name} </h1>
+  </div>;
+};
+
+// OOP
+class Classic extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      myState: true,
+    };
+  }
+}

@@ -20,4 +20,17 @@ const deposit = () => {
   }
 };
 
+const getNumberOfLines = () => {
+  while (true) {
+    let numberOfLines = parseFloat(prompt("Enter the nubmer of lines (1-3): "));
+
+    if (isNaN(numberOfLines) || numberOfLines <= 0 || numberOfLines > 3) {
+      console.log("Invalid number of lines, try again!");
+    } else {
+      return numberOfLines;
+    }
+  }
+};
+
 const depositAmount = deposit();
+const numberOfLines = getNumberOfLines();
